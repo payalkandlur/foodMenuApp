@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3cv-tE-nda">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favourites-->
+        <scene sceneID="56d-T2-eOS">
+            <objects>
+                <viewController storyboardIdentifier="FavViewController" id="2vH-vT-OuL" customClass="FavViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oo2-BT-wha">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0kU-iD-0mg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2vH-vT-OuL" id="MHB-dA-ETt"/>
+                                    <outlet property="delegate" destination="2vH-vT-OuL" id="WVO-pp-5hO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="77T-Ev-GNc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0kU-iD-0mg" secondAttribute="bottom" id="2W0-qn-kqS"/>
+                            <constraint firstItem="0kU-iD-0mg" firstAttribute="leading" secondItem="77T-Ev-GNc" secondAttribute="leading" id="Kfa-KR-XWz"/>
+                            <constraint firstItem="0kU-iD-0mg" firstAttribute="trailing" secondItem="77T-Ev-GNc" secondAttribute="trailing" id="eDo-fB-Ocq"/>
+                            <constraint firstItem="0kU-iD-0mg" firstAttribute="top" secondItem="77T-Ev-GNc" secondAttribute="top" id="q55-Qv-HDH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favourites" image="heart" catalog="system" id="IdX-81-62c"/>
+                    <connections>
+                        <outlet property="tableView" destination="0kU-iD-0mg" id="Bng-6j-Uws"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGP-wX-LLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="367"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="kj1-fR-tuz">
+            <objects>
+                <viewController storyboardIdentifier="FoodListViewController" id="Bwe-20-csn" customClass="FoodListViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zqo-CW-Mk6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jry-2L-CO9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bwe-20-csn" id="lLk-LO-PaZ"/>
+                                    <outlet property="delegate" destination="Bwe-20-csn" id="Hsj-mB-jvP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gT3-aa-SVZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jry-2L-CO9" firstAttribute="top" secondItem="gT3-aa-SVZ" secondAttribute="top" id="0y6-R6-Gj3"/>
+                            <constraint firstItem="gT3-aa-SVZ" firstAttribute="bottom" secondItem="Jry-2L-CO9" secondAttribute="bottom" id="hLR-c0-RoV"/>
+                            <constraint firstItem="gT3-aa-SVZ" firstAttribute="trailing" secondItem="Jry-2L-CO9" secondAttribute="trailing" id="hjS-NI-Nbh"/>
+                            <constraint firstItem="Jry-2L-CO9" firstAttribute="leading" secondItem="gT3-aa-SVZ" secondAttribute="leading" id="idz-JJ-2A7"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Menu" image="list.dash" catalog="system" id="aNh-a3-hCE"/>
+                    <connections>
+                        <outlet property="tableView" destination="Jry-2L-CO9" id="yLD-lq-38Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRr-23-HgH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="-405"/>
+        </scene>
+        <!--Base Tab Bar View Controller-->
+        <scene sceneID="ylg-E8-q4V">
+            <objects>
+                <tabBarController id="3cv-tE-nda" customClass="BaseTabBarViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FzY-jT-ue8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Bwe-20-csn" kind="relationship" relationship="viewControllers" id="3Hd-ee-rbQ"/>
+                        <segue destination="2vH-vT-OuL" kind="relationship" relationship="viewControllers" id="6oi-2y-MFv"/>
+                        <segue destination="zAL-4J-tyz" kind="relationship" relationship="viewControllers" id="Lwj-Wf-Zc6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dx3-ZQ-7G1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591" y="-15"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="C5M-J6-XpF">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="zAL-4J-tyz" customClass="SearchViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iCE-iC-FQR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="S35-Rp-u21">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zAL-4J-tyz" id="ivm-HM-jAJ"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r68-Wt-u40">
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zAL-4J-tyz" id="AYC-Sh-ho8"/>
+                                    <outlet property="delegate" destination="zAL-4J-tyz" id="qxn-gt-9yT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A27-5t-tqw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A27-5t-tqw" firstAttribute="trailing" secondItem="r68-Wt-u40" secondAttribute="trailing" id="CVy-hg-Rbw"/>
+                            <constraint firstItem="S35-Rp-u21" firstAttribute="leading" secondItem="A27-5t-tqw" secondAttribute="leading" id="Qsw-nl-GtJ"/>
+                            <constraint firstItem="A27-5t-tqw" firstAttribute="bottom" secondItem="r68-Wt-u40" secondAttribute="bottom" id="ZFT-Tc-xnK"/>
+                            <constraint firstItem="S35-Rp-u21" firstAttribute="top" secondItem="A27-5t-tqw" secondAttribute="top" id="Zln-11-VCN"/>
+                            <constraint firstItem="r68-Wt-u40" firstAttribute="leading" secondItem="A27-5t-tqw" secondAttribute="leading" id="bbk-tC-i9T"/>
+                            <constraint firstItem="r68-Wt-u40" firstAttribute="top" secondItem="S35-Rp-u21" secondAttribute="bottom" id="ehe-3A-lfC"/>
+                            <constraint firstItem="S35-Rp-u21" firstAttribute="trailing" secondItem="A27-5t-tqw" secondAttribute="trailing" id="gwg-Z0-aNw"/>
+                            <constraint firstItem="S35-Rp-u21" firstAttribute="top" secondItem="A27-5t-tqw" secondAttribute="top" id="hWb-1A-FX3"/>
+                            <constraint firstAttribute="trailing" secondItem="S35-Rp-u21" secondAttribute="trailing" id="lxV-VA-hwZ"/>
+                            <constraint firstItem="S35-Rp-u21" firstAttribute="leading" secondItem="A27-5t-tqw" secondAttribute="leading" id="skw-y3-PUn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="3Bu-aB-BgT"/>
+                    <connections>
+                        <outlet property="searchBar" destination="S35-Rp-u21" id="KVS-1r-D4t"/>
+                        <outlet property="tableView" destination="r68-Wt-u40" id="mI4-SQ-xs6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pBS-3c-Fwr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591.304347826087" y="791.51785714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
